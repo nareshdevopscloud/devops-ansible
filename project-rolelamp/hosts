@@ -1,0 +1,4 @@
+# This is the default ansible 'hosts' file.
+[target]
+172.31.84.126
+

@@ -1,0 +1,18 @@
+---
+- name: install mariadb
+  yum:
+    name: mariadb
+    state: latest
+- name: install mariadb server
+  yum: 
+    name: mariadb-server
+    state: latest
+- name: install php_mysql
+  yum:
+    name: php-mysql
+    state: latest
+- name: start mariadb
+  service:
+    name: mariadb
+    state: started
+

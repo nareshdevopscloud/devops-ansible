@@ -1,0 +1,17 @@
+---
+- name: first playbook
+  hosts: all
+  become: yes
+  tasks:
+    - name: install apache
+      yum:
+        name: httpd
+        state: latest
+    - name: install mysql
+      dnf:
+        name: mariadb105-server #mysql
+        state: latest
+    - name: install python
+      yum:
+        name: python3
+        state: latest

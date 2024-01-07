@@ -1,0 +1,19 @@
+---
+- name: first playbook
+  hosts: all
+  tasks:
+    - name: installing git
+      yum: name=git state=present
+      tags: a
+    - name: installing maven
+      yum: name=maven state=present
+      tags: b
+    - name: create user
+      user: name=rolex state=present
+      tags: c
+    - name: installing httpd
+      yum: name=httpd state=present
+      tags: d
+    - name: starting apache
+      service: name=httpd state=started
+      tags: e
