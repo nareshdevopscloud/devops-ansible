@@ -1,0 +1,19 @@
+---
+- name: loopr playbook
+  hosts: all
+  become: yes
+  tasks:
+    - name: install multiple softwares
+      yum:
+        name: "{{item.x}}"
+        state: "{{item.y}}"
+      with_items:
+        - {x: httpd, y: latest}
+        - {x: git, y: absent}
+        - {x: tree, y: latest}
+    - name: start httpd server
+      service:
+        name: "{{item.x}}"
+        state: "{{item.z}}"
+      with_items:
+        - {x: httpd, z: started}
