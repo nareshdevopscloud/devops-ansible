@@ -4,9 +4,9 @@
   become: yes
   tasks:
     - name: call child playbook
-      include: "{{item}}"
+      include_tasks: "{{item}}"
       with_items: 
-        - inc-install.yml
-        - inc-start.yml
-        - inc-copy.yml
-        - inc-service.yml
+        - child_install.yaml
+        - child_start.yaml
+        - child_copy.yaml
+        - child_restart.yaml

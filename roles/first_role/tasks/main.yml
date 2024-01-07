@@ -1,0 +1,8 @@
+---
+- name: call child playbook
+  include_tasks: "{{item}}"
+  with_items: 
+    - child_install.yaml
+    - child_start.yaml
+    - child_copy.yaml
+    - child_restart.yaml

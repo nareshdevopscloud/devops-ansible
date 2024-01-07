@@ -1,0 +1,6 @@
+---
+- name: first playbook
+  hosts: all
+  become: yes
+  roles:
+    - first_role
