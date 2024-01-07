@@ -1,0 +1,7 @@
+child_restart.yaml
+---
+- name: restart server
+  service:
+    name: httpd
+    state: restarted
+
