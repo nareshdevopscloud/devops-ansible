@@ -9,6 +9,13 @@ ssh-keygen --copy public ip and paste it into target server path .ssh/authorized
 -----------------------sample ad-hoc coomand -------------------
 Ad-hoc commands are commands which can be run individually to perform quick functions
 
+inventory: An inventory is a list of managed nodes, or hosts, that Ansible deploys and configures. 
+This guide introduces you to inventories and covers the following topics: Creating inventories to track a list of servers and devices that you want to automate
+
+Inventory default path sudo /etc/ansible/hosts
+
+if target node will add in default path no need to pass '-i inventory' in command it will fetch autometically from default path
+
 vi inventory 
 
 add target private ip
